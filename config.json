@@ -1,0 +1,151 @@
+{
+  "school": {
+    "name": "Tribhuwan Aadarsha Model Secondary School",
+    "shortName": "TAMSS",
+    "location": "Putalibazar-1, Syangja, Nepal",
+    "district": "Syangja",
+    "province": "Gandaki",
+    "country": "Nepal",
+    "website": "www.tribhuwan-school.edu.np"
+  },
+  "contact": {
+    "phone": "+977-74-550-123",
+    "phone_alt": "+977-74-550-456",
+    "email": "info@tribhuwan-school.edu.np",
+    "admissions_email": "admissions@tribhuwan-school.edu.np",
+    "address": "Putalibazar Ward No. 1, Syangja District, Gandaki Province, Nepal"
+  },
+  "office_hours": {
+    "weekday": {
+      "start": "10:00 AM",
+      "end": "5:00 PM",
+      "days": "Monday - Friday"
+    },
+    "saturday": {
+      "start": "10:00 AM",
+      "end": "2:00 PM"
+    },
+    "sunday": "Closed"
+  },
+  "leadership": {
+    "principal": {
+      "name": "Prem Narayan Paudel",
+      "title": "Principal",
+      "experience": "25+ years",
+      "qualification": "M.Ed.",
+      "bio": "Visionary leader committed to academic excellence and holistic development.",
+      "phone": "+977-74-550-123 (Ext: 101)"
+    },
+    "vice_principal": {
+      "name": "Bishnu Pokhrel",
+      "title": "Vice-Principal",
+      "experience": "18+ years",
+      "qualification": "B.Sc.",
+      "bio": "Oversees curriculum development and instructional innovation.",
+      "phone": "+977-74-550-123 (Ext: 102)"
+    }
+  },
+  "academics": {
+    "programs": [
+      {
+        "level": "School Level",
+        "duration": "3 years",
+        "subjects": [
+          "Nepali",
+          "English",
+          "Mathematics",
+          "Science",
+          "Social Studies",
+          "Physical Education"
+        ],
+        "fees": 45000,
+        "currency": "NPR"
+      },
+      {
+        "level": "+2 Science",
+        "duration": "2 years",
+        "subjects": [
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Mathematics",
+          "English",
+          "Nepali"
+        ],
+        "fees": 55000,
+        "currency": "NPR"
+      },
+      {
+        "level": "+2 Management",
+        "duration": "2 years",
+        "subjects": [
+          "Accountancy",
+          "Economics",
+          "Business Studies",
+          "Mathematics",
+          "English",
+          "Nepali"
+        ],
+        "fees": 50000,
+        "currency": "NPR"
+      }
+    ]
+  },
+  "facilities": [
+    "Science laboratories",
+    "Computer lab with internet",
+    "Digital library",
+    "Multi-media classrooms",
+    "Sports complex",
+    "Cafeteria",
+    "Counseling center",
+    "Medical clinic"
+  ],
+  "scholarships": [
+    "Merit-based (50% discount)",
+    "Need-based financial aid",
+    "Sports excellence grants",
+    "Sibling discounts",
+    "Early registration discount (10%)"
+  ],
+  "admissions": {
+    "application_deadline": "November 30",
+    "entrance_exam_required": true,
+    "interview_required": true,
+    "minimum_marks": {
+      "school_level": 0,
+      "plus2_science": 60,
+      "plus2_management": 55
+    }
+  },
+  "colors": {
+    "primary": "#0b63a6",
+    "primary_light": "#2e8bc0",
+    "primary_dark": "#06314a",
+    "secondary": "#f6b042",
+    "accent": "#f4f8fb",
+    "text_dark": "#102026",
+    "text_light": "#6b7b84",
+    "border": "#e9f0f3"
+  },
+  "social_media": {
+    "facebook": "#",
+    "twitter": "#",
+    "instagram": "#",
+    "linkedin": "#"
+  },
+  "map": {
+    "latitude": 27.3266667,
+    "longitude": 83.8766667,
+    "zoom": 13,
+    "embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.123456789!2d83.8766667!3d27.3266667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb5678abc%3A0x123456789abc!2sPutalibazar%2C%20Syangja%2C%20Nepal!5e0!3m2!1sen!2snp!4v1234567890123"
+  },
+  "metadata": {
+    "description": "Tribhuwan Aadarsha Model Secondary School - Quality Education in Syangja, Nepal",
+    "keywords": "school, education, Nepal, Syangja, secondary school, admissions",
+    "author": "Tribhuwan Aadarsha Model Secondary School",
+    "version": "1.0",
+    "created": "November 2025",
+    "last_updated": "November 28, 2025"
+  }
+}

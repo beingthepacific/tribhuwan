@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Admissions - Tribhuwan Aadarsha Model Secondary School">
+  
+  <title>Admissions - Tribhuwan Aadarsha Model Secondary School</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/chatbot.css">
+  <link rel="stylesheet" href="../assets/css/animated-background.css">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ========== ANIMATED BACKGROUND LAYERS ========== -->
+  <div class="animated-gradient-bg" aria-hidden="true"></div>
+  <div class="parallax-bg" aria-hidden="true">
+    <div class="parallax-layer parallax-layer-1"></div>
+    <div class="parallax-layer parallax-layer-2"></div>
+  </div>
+  <div class="motion-waves" aria-hidden="true">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  <div class="floating-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+  </div>
+  <div class="particle-container" aria-hidden="true"></div>
+  <div class="light-beams" aria-hidden="true">
+    <div class="light-beam beam-1"></div>
+    <div class="light-beam beam-2"></div>
+    <div class="light-beam beam-3"></div>
+  </div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="content-overlay" aria-hidden="true"></div>
+
+  <!-- AI CHATBOT WIDGET -->
+  <div class="chatbot-container" id="chatbot">
+    <div class="chatbot-bubble" id="chatbot-toggle">
+      <div class="chatbot-icon">💬</div>
+      <span class="chatbot-pulse"></span>
+    </div>
+    <div class="chatbot-window" id="chatbot-window" style="display: none;">
+      <div class="chatbot-header">
+        <h3>School Assistant</h3>
+        <button class="chatbot-close" id="chatbot-close">✕</button>
+      </div>
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="message bot-message"><p>👋 Hi! I'm your School Assistant. Ask me about admissions, academics, events, or contact information!</p></div>
+      </div>
+      <div class="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Ask me anything..." maxlength="200">
+        <button id="chatbot-send">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header>
+    <div class="header-top">
+      <div class="header-top-content">
+        <div class="header-top-info">
+          <span>📞 +977-74-550-123</span>
+          <span>📧 info@tribhuwan-school.edu.np</span>
+        </div>
+        <div class="header-top-info">
+          <span>⏰ Mon-Fri: 10 AM - 5 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <img src="../assets/images/logo.jpg?v=2" alt="Tribhuwan Aadarsha Logo" style="height: 50px; width: auto; margin-right: 10px; border-radius: 4px;">
+          <div>
+            <div style="font-size: 0.7em; color: var(--secondary-color);">Tribhuwan Aadarsha</div>
+            <div>Model School</div>
+          </div>
+        </div>
+
+        <ul class="nav-menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html" class="active">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== PAGE HERO ==================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Admissions</h1>
+      <p class="location">📍 Join Our Learning Community</p>
+    </div>
+  </section>
+
+  <!-- ==================== ELIGIBILITY ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Eligibility Criteria</h2>
+        <p class="section-subtitle">Requirements for admission to various levels</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--primary-light), var(--primary-color)); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📚</div>
+          <div class="card-content">
+            <h3 class="card-title">School Level Entry</h3>
+            <ul style="list-style-position: inside; color: var(--text-light); font-size: 0.95rem; line-height: 1.8;">
+              <li>✓ Age 13+ years</li>
+              <li>✓ 8th class pass</li>
+              <li>✓ Entrance exam</li>
+              <li>✓ Interview</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark)); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🔬</div>
+          <div class="card-content">
+            <h3 class="card-title">+2 Science Stream</h3>
+            <ul style="list-style-position: inside; color: var(--text-light); font-size: 0.95rem; line-height: 1.8;">
+              <li>✓ 10+2 pass rate</li>
+              <li>✓ Science background</li>
+              <li>✓ Minimum 60% marks</li>
+              <li>✓ Merit-based selection</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📊</div>
+          <div class="card-content">
+            <h3 class="card-title">+2 Management Stream</h3>
+            <ul style="list-style-position: inside; color: var(--text-light); font-size: 0.95rem; line-height: 1.8;">
+              <li>✓ 10+2 pass rate</li>
+              <li>✓ Any background</li>
+              <li>✓ Minimum 55% marks</li>
+              <li>✓ Merit-based selection</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADMISSION PROCESS ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <h2>Admission Process</h2>
+        <p class="section-subtitle">Step-by-step guide to enrollment</p>
+      </div>
+
+      <div style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: var(--shadow-md);">
+        <div style="display: grid; gap: 2rem;">
+          <!-- Step 1 -->
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+            <div style="background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark)); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0;">1</div>
+            <div>
+              <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Complete Application Form</h3>
+              <p style="color: var(--text-light); margin: 0;">Fill out the admission form available online or at the school office with all required information.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+            <div style="background: linear-gradient(135deg, var(--primary-light), var(--primary-color)); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0;">2</div>
+            <div>
+              <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Submit Documents</h3>
+              <p style="color: var(--text-light); margin: 0;">Submit all required documents including birth certificate, previous academic records, and identification.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+            <div style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0;">3</div>
+            <div>
+              <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Entrance Examination</h3>
+              <p style="color: var(--text-light); margin: 0;">Sit for the entrance exam to assess your academic level and suitability for the program.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+            <div style="background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0;">4</div>
+            <div>
+              <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Interview Round</h3>
+              <p style="color: var(--text-light); margin: 0;">Participate in an interview with school administration to assess your suitability.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+            <div style="background: linear-gradient(135deg, var(--primary-dark), var(--secondary-color)); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0;">5</div>
+            <div>
+              <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Admission Decision</h3>
+              <p style="color: var(--text-light); margin: 0;">Receive admission letter and complete enrollment process with fee payment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== REQUIRED DOCUMENTS ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Required Documents</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: var(--shadow-md);">
+          <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">📋 Original Documents</h3>
+          <ul style="list-style-position: inside; color: var(--text-light); line-height: 2;">
+            <li>✓ Birth certificate (attested copy)</li>
+            <li>✓ Previous school transfer certificate</li>
+            <li>✓ Previous academic report card</li>
+            <li>✓ Citizenship certificate</li>
+            <li>✓ Character certificate from previous school</li>
+            <li>✓ Parent identity proof</li>
+          </ul>
+        </div>
+
+        <div style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: var(--shadow-md);">
+          <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">📸 Photographs & Others</h3>
+          <ul style="list-style-position: inside; color: var(--text-light); line-height: 2;">
+            <li>✓ 4 passport-size photos</li>
+            <li>✓ Medical fitness certificate</li>
+            <li>✓ Vaccination records</li>
+            <li>✓ Emergency contact information</li>
+            <li>✓ Completed admission form</li>
+            <li>✓ Parent contact details</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADMISSION FORM ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <h2>Online Admission Form</h2>
+        <p class="section-subtitle">Fill out this form to apply for admission</p>
+      </div>
+
+      <div class="contact-form-container">
+        <form class="admission-form">
+          <!-- Personal Information -->
+          <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; margin-top: 0;">Personal Information</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullname">Full Name *</label>
+              <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth *</label>
+              <input type="date" id="dob" name="dob" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="gender">Gender *</label>
+              <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="citizenship">Citizenship Number</label>
+              <input type="text" id="citizenship" name="citizenship" placeholder="Enter citizenship number">
+            </div>
+          </div>
+
+          <!-- Contact Information -->
+          <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; margin-top: 2rem;">Contact Information</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+977-74-XXX-XXXX">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Residential Address</label>
+            <textarea id="address" name="address" placeholder="Enter your full address"></textarea>
+          </div>
+
+          <!-- Academic Information -->
+          <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; margin-top: 2rem;">Academic Information</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="class">Applying for Class/Program *</label>
+              <select id="class" name="class" required>
+                <option value="">Select Class/Program</option>
+                <option value="school-level">School Level</option>
+                <option value="plus2-science">+2 Science</option>
+                <option value="plus2-management">+2 Management</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="prevschool">Previous School</label>
+              <input type="text" id="prevschool" name="prevschool" placeholder="Name of your previous school">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prevscore">Previous Year Grade/Score</label>
+              <input type="text" id="prevscore" name="prevscore" placeholder="e.g., 85% or A+">
+            </div>
+            <div class="form-group">
+              <label for="medium">Medium of Instruction</label>
+              <select id="medium" name="medium">
+                <option value="">Select Medium</option>
+                <option value="nepali">Nepali</option>
+                <option value="english">English</option>
+                <option value="bilingual">Bilingual</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Parent Information -->
+          <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; margin-top: 2rem;">Parent/Guardian Information</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="parentname">Parent/Guardian Name *</label>
+              <input type="text" id="parentname" name="parentname" required placeholder="Name of parent or guardian">
+            </div>
+            <div class="form-group">
+              <label for="parentphone">Parent/Guardian Phone *</label>
+              <input type="tel" id="parentphone" name="parentphone" required placeholder="+977-XX-XXX-XXXX">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="parentemail">Parent/Guardian Email</label>
+            <input type="email" id="parentemail" name="parentemail" placeholder="parent.email@example.com">
+          </div>
+
+          <!-- Additional Information -->
+          <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; margin-top: 2rem;">Additional Information</h3>
+
+          <div class="form-group">
+            <label for="extracurr">Extracurricular Activities/Interests</label>
+            <textarea id="extracurr" name="extracurr" placeholder="List your interests and hobbies"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="motivation">Why do you want to join our school?</label>
+            <textarea id="motivation" name="motivation" placeholder="Tell us about your motivation and goals"></textarea>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="form-group" style="margin: 2rem 0;">
+            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal; cursor: pointer;">
+              <input type="checkbox" name="agreement" required style="width: auto; cursor: pointer;">
+              I agree to the terms and conditions and declare that the information provided is true.
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 300px; padding: 14px;">
+              Submit Admission Form
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <p style="text-align: center; color: var(--text-light); margin-top: 2rem; font-size: 0.95rem;">
+        📌 All fields marked with * are mandatory. Please ensure all information is accurate before submission.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== FEES & SCHOLARSHIPS ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Fees & Financial Aid</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div style="background: linear-gradient(135deg, var(--accent-color), var(--border-light)); border-radius: 12px; padding: 2rem;">
+          <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">💰 Annual Fee Structure</h3>
+          <div style="background: var(--white); border-radius: 8px; padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid var(--border-light); margin-bottom: 1rem;">
+              <span style="font-weight: 600; color: var(--text-dark);">School Level</span>
+              <span style="color: var(--secondary-color); font-weight: 600;">NPR 45,000</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid var(--border-light); margin-bottom: 1rem;">
+              <span style="font-weight: 600; color: var(--text-dark);">+2 Science</span>
+              <span style="color: var(--secondary-color); font-weight: 600;">NPR 55,000</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="font-weight: 600; color: var(--text-dark);">+2 Management</span>
+              <span style="color: var(--secondary-color); font-weight: 600;">NPR 50,000</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, var(--accent-color), var(--border-light)); border-radius: 12px; padding: 2rem;">
+          <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">🏆 Scholarships Available</h3>
+          <ul style="list-style-position: inside; color: var(--text-light); line-height: 2; margin: 0;">
+            <li>✓ Merit-based scholarships (50% discount)</li>
+            <li>✓ Need-based financial aid</li>
+            <li>✓ Sports excellence grants</li>
+            <li>✓ Sibling discounts</li>
+            <li>✓ Early registration discount (10%)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About School</h3>
+        <p>Tribhuwan Aadarsha Model Secondary School is committed to providing quality education and developing responsible global citizens.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>📍 Putalibazar-1, Syangja</li>
+          <li>📞 +977-74-550-123</li>
+          <li>📧 info@tribhuwan-school.edu.np</li>
+          <li>🕒 Mon-Fri: 10 AM - 5 PM</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Tribhuwan Aadarsha Model Secondary School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/animated-background.js" defer></script>
+  <script src="../assets/js/chatbot.js" defer></script>
+</body>
+</html>

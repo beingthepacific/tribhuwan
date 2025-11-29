@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic Programs - Tribhuwan Aadarsha Model Secondary School">
+  
+  <title>Academics - Tribhuwan Aadarsha Model Secondary School</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/chatbot.css">
+  <link rel="stylesheet" href="../assets/css/animated-background.css">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ========== ANIMATED BACKGROUND LAYERS ========== -->
+  <div class="animated-gradient-bg" aria-hidden="true"></div>
+  <div class="parallax-bg" aria-hidden="true">
+    <div class="parallax-layer parallax-layer-1"></div>
+    <div class="parallax-layer parallax-layer-2"></div>
+  </div>
+  <div class="motion-waves" aria-hidden="true">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  <div class="floating-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+  </div>
+  <div class="particle-container" aria-hidden="true"></div>
+  <div class="light-beams" aria-hidden="true">
+    <div class="light-beam beam-1"></div>
+    <div class="light-beam beam-2"></div>
+    <div class="light-beam beam-3"></div>
+  </div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="content-overlay" aria-hidden="true"></div>
+
+  <!-- AI CHATBOT WIDGET -->
+  <div class="chatbot-container" id="chatbot">
+    <div class="chatbot-bubble" id="chatbot-toggle">
+      <div class="chatbot-icon">💬</div>
+      <span class="chatbot-pulse"></span>
+    </div>
+    <div class="chatbot-window" id="chatbot-window" style="display: none;">
+      <div class="chatbot-header">
+        <h3>School Assistant</h3>
+        <button class="chatbot-close" id="chatbot-close">✕</button>
+      </div>
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="message bot-message"><p>👋 Hi! I'm your School Assistant. Ask me about admissions, academics, events, or contact information!</p></div>
+      </div>
+      <div class="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Ask me anything..." maxlength="200">
+        <button id="chatbot-send">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header>
+    <div class="header-top">
+      <div class="header-top-content">
+        <div class="header-top-info">
+          <span>📞 +977-74-550-123</span>
+          <span>📧 info@tribhuwan-school.edu.np</span>
+        </div>
+        <div class="header-top-info">
+          <span>⏰ Mon-Fri: 10 AM - 5 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <img src="../assets/images/logo.jpg?v=2" alt="Tribhuwan Aadarsha Logo" style="height: 50px; width: auto; margin-right: 10px; border-radius: 4px;">
+          <div>
+            <div style="font-size: 0.7em; color: var(--secondary-color);">Tribhuwan Aadarsha</div>
+            <div>Model School</div>
+          </div>
+        </div>
+
+        <ul class="nav-menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html" class="active">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== PAGE HERO ==================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Academic Programs</h1>
+      <p class="location">📍 Excellence in Education</p>
+    </div>
+  </section>
+
+  <!-- ==================== CURRICULUM OVERVIEW ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Curriculum Overview</h2>
+        <p class="section-subtitle">Comprehensive education from primary through advanced level</p>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-image"><img src="../assets/images/logo.jpg?v=2" alt="Our Approach to Learning" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"></div>
+        <div class="info-block-content">
+          <h3>Our Approach to Learning</h3>
+          <p>Our curriculum is designed to be comprehensive, engaging, and aligned with national standards while incorporating international best practices. We emphasize:</p>
+          
+          <ul style="list-style-position: inside; color: var(--text-light); line-height: 2; margin: 1rem 0;">
+            <li>✓ Critical thinking and problem-solving skills</li>
+            <li>✓ Hands-on experiential learning</li>
+            <li>✓ Integration of technology in classrooms</li>
+            <li>✓ Collaborative and team-based projects</li>
+            <li>✓ Ethical values and social responsibility</li>
+            <li>✓ Interdisciplinary learning approaches</li>
+          </ul>
+
+          <p>Each subject is taught by qualified faculty members with specialized expertise, ensuring high-quality instruction and mentorship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ACADEMIC PROGRAMS ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Programs</h2>
+      </div>
+
+      <div class="grid grid-2" style="margin-bottom: 3rem;">
+        <!-- School Level -->
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--primary-light), var(--primary-color)); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📖</div>
+          <div class="card-content">
+            <h3 class="card-title">School Level</h3>
+            <p class="card-text">Foundation years focusing on core subjects and skill development.</p>
+            
+            <h4 style="color: var(--primary-color); font-size: 1rem; margin-top: 1rem; margin-bottom: 0.5rem;">Key Subjects:</h4>
+            <ul style="list-style-position: inside; color: var(--text-light); font-size: 0.9rem;">
+              <li>• Nepali</li>
+              <li>• English</li>
+              <li>• Mathematics</li>
+              <li>• Science</li>
+              <li>• Social Studies</li>
+              <li>• Physical Education</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Plus Two Science -->
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark)); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🔬</div>
+          <div class="card-content">
+            <h3 class="card-title">+2 Science Program</h3>
+            <p class="card-text">Advanced science curriculum for engineering and medical aspirants.</p>
+            
+            <h4 style="color: var(--primary-color); font-size: 1rem; margin-top: 1rem; margin-bottom: 0.5rem;">Core Subjects:</h4>
+            <ul style="list-style-position: inside; color: var(--text-light); font-size: 0.9rem;">
+              <li>• Physics</li>
+              <li>• Chemistry</li>
+              <li>• Biology</li>
+              <li>• Mathematics</li>
+              <li>• English</li>
+              <li>• Nepali</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Plus Two Management -->
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📊</div>
+          <div class="card-content">
+            <h3 class="card-title">+2 Management</h3>
+            <p class="card-text">Business-focused program preparing students for commerce studies.</p>
+            
+            <h4 style="color: var(--primary-color); font-size: 1rem; margin-top: 1rem; margin-bottom: 0.5rem;">Core Subjects:</h4>
+            <ul style="list-style-position: inside; color: var(--text-light); font-size: 0.9rem;">
+              <li>• Accountancy</li>
+              <li>• Economics</li>
+              <li>• Business Studies</li>
+              <li>• Mathematics</li>
+              <li>• English</li>
+              <li>• Nepali</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Elective Subjects -->
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--primary-light), var(--secondary-color)); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🎨</div>
+          <div class="card-content">
+            <h3 class="card-title">Elective & Co-curricular</h3>
+            <p class="card-text">Optional subjects and activities for holistic development.</p>
+            
+            <h4 style="color: var(--primary-color); font-size: 1rem; margin-top: 1rem; margin-bottom: 0.5rem;">Options Available:</h4>
+            <ul style="list-style-position: inside; color: var(--text-light); font-size: 0.9rem;">
+              <li>• Computer Science</li>
+              <li>• Psychology</li>
+              <li>• Information Technology</li>
+              <li>• Environmental Science</li>
+              <li>• Sports & Physical Ed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TEACHING METHODOLOGY ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Teaching Methodology</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--accent-color), var(--border-light)); display: flex; align-items: center; justify-content: center; font-size: 4rem;">💡</div>
+          <div class="card-content">
+            <h3 class="card-title">Interactive Learning</h3>
+            <p class="card-text">Class discussions, group activities, and peer learning sessions promote active engagement and deeper understanding.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--accent-color), var(--border-light)); display: flex; align-items: center; justify-content: center; font-size: 4rem;">💻</div>
+          <div class="card-content">
+            <h3 class="card-title">Technology Integration</h3>
+            <p class="card-text">Modern labs, digital classrooms, and online resources enhance learning experiences and prepare students for the digital world.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--accent-color), var(--border-light)); display: flex; align-items: center; justify-content: center; font-size: 4rem;">🔬</div>
+          <div class="card-content">
+            <h3 class="card-title">Practical Training</h3>
+            <p class="card-text">Laboratory experiments, field work, and project-based learning provide hands-on experience in real-world applications.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--accent-color), var(--border-light)); display: flex; align-items: center; justify-content: center; font-size: 4rem;">📈</div>
+          <div class="card-content">
+            <h3 class="card-title">Assessment & Evaluation</h3>
+            <p class="card-text">Continuous assessment, formative feedback, and summative exams ensure comprehensive evaluation of student progress.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--accent-color), var(--border-light)); display: flex; align-items: center; justify-content: center; font-size: 4rem;">🎯</div>
+          <div class="card-content">
+            <h3 class="card-title">Personalized Support</h3>
+            <p class="card-text">Tutorial sessions, counseling, and mentorship programs address individual learning needs and challenges.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--accent-color), var(--border-light)); display: flex; align-items: center; justify-content: center; font-size: 4rem;">🌍</div>
+          <div class="card-content">
+            <h3 class="card-title">Global Perspective</h3>
+            <p class="card-text">Exposure to international curricula, cultural exchanges, and global citizenship initiatives broaden student worldviews.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SYLLABI & RESOURCES ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <h2>Academic Resources & Downloads</h2>
+        <p class="section-subtitle">Study materials and curriculum documents</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div>
+          <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">📚 School Level Resources</h3>
+          <div style="background: var(--white); border-radius: 8px; padding: 1.5rem; box-shadow: var(--shadow-md);">
+            <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-light);">
+              <h4 style="margin-bottom: 0.5rem; color: var(--text-dark);">Mathematics Syllabus</h4>
+              <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Comprehensive guide to mathematics curriculum</p>
+              <a href="#" class="btn btn-outline btn-sm">📥 Download PDF</a>
+            </div>
+            <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-light);">
+              <h4 style="margin-bottom: 0.5rem; color: var(--text-dark);">Science Syllabus</h4>
+              <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Physics, Chemistry, and Biology combined curriculum</p>
+              <a href="#" class="btn btn-outline btn-sm">📥 Download PDF</a>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 0.5rem; color: var(--text-dark);">English Literature Guide</h4>
+              <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Reading lists and study guide</p>
+              <a href="#" class="btn btn-outline btn-sm">📥 Download PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">🎓 Plus Two Resources</h3>
+          <div style="background: var(--white); border-radius: 8px; padding: 1.5rem; box-shadow: var(--shadow-md);">
+            <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-light);">
+              <h4 style="margin-bottom: 0.5rem; color: var(--text-dark);">+2 Science Syllabus</h4>
+              <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Advanced science programs detailed curriculum</p>
+              <a href="#" class="btn btn-outline btn-sm">📥 Download PDF</a>
+            </div>
+            <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-light);">
+              <h4 style="margin-bottom: 0.5rem; color: var(--text-dark);">+2 Management Syllabus</h4>
+              <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Business studies curriculum guide</p>
+              <a href="#" class="btn btn-outline btn-sm">📥 Download PDF</a>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 0.5rem; color: var(--text-dark);">Assessment Guidelines</h4>
+              <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Examination patterns and marking schemes</p>
+              <a href="#" class="btn btn-outline btn-sm">📥 Download PDF</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ACADEMIC CALENDAR ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Academic Calendar 2024-2025</h2>
+      </div>
+
+      <div style="background: var(--white); border-radius: 12px; box-shadow: var(--shadow-md); overflow: hidden;">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead style="background: linear-gradient(135deg, var(--primary-color), var(--primary-light)); color: white;">
+            <tr>
+              <th style="padding: 1.5rem; text-align: left; font-weight: 600;">Event</th>
+              <th style="padding: 1.5rem; text-align: left; font-weight: 600;">Date</th>
+              <th style="padding: 1.5rem; text-align: left; font-weight: 600;">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 1.5rem;">Classes Begin</td>
+              <td style="padding: 1.5rem;">April 1, 2024</td>
+              <td style="padding: 1.5rem;">Academic year starts for all classes</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light); background: var(--accent-color);">
+              <td style="padding: 1.5rem;">First Terminal Exam</td>
+              <td style="padding: 1.5rem;">June 10-20, 2024</td>
+              <td style="padding: 1.5rem;">Mid-term examinations</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 1.5rem;">Summer Vacation</td>
+              <td style="padding: 1.5rem;">July 1-20, 2024</td>
+              <td style="padding: 1.5rem;">School holiday break</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light); background: var(--accent-color);">
+              <td style="padding: 1.5rem;">Parent-Teacher Conference</td>
+              <td style="padding: 1.5rem;">September 5-7, 2024</td>
+              <td style="padding: 1.5rem;">Discussion of student progress</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 1.5rem;">Sports Meet</td>
+              <td style="padding: 1.5rem;">November 1-3, 2024</td>
+              <td style="padding: 1.5rem;">Inter-house sports competition</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light); background: var(--accent-color);">
+              <td style="padding: 1.5rem;">Final Examinations</td>
+              <td style="padding: 1.5rem;">December 1-20, 2024</td>
+              <td style="padding: 1.5rem;">Annual examinations</td>
+            </tr>
+            <tr style="background: var(--accent-color);">
+              <td style="padding: 1.5rem;">Winter Vacation</td>
+              <td style="padding: 1.5rem;">December 22 - Jan 5</td>
+              <td style="padding: 1.5rem;">Winter break and holidays</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About School</h3>
+        <p>Tribhuwan Aadarsha Model Secondary School is committed to providing quality education and developing responsible global citizens.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>📍 Putalibazar-1, Syangja</li>
+          <li>📞 +977-74-550-123</li>
+          <li>📧 info@tribhuwan-school.edu.np</li>
+          <li>🕒 Mon-Fri: 10 AM - 5 PM</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Tribhuwan Aadarsha Model Secondary School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/animated-background.js" defer></script>
+  <script src="../assets/js/chatbot.js" defer></script>
+</body>
+</html>
