@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tribhuwan Aadarsha Model Secondary School - Education Excellence in Putalibazar, Syangja, Nepal">
+  <meta name="keywords" content="school, education, Nepal, Syangja, secondary school">
+  <meta name="author" content="Tribhuwan Aadarsha Model Secondary School">
+  
+  <title>Tribhuwan Aadarsha Model Secondary School</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/chatbot.css">
+  <link rel="stylesheet" href="assets/css/animated-background.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==================== SCROLL PROGRESS BAR ==================== -->
+  <div id="scroll-progress"></div>
+
+  <!-- ========== ANIMATED BACKGROUND LAYERS (non-interactive) ========== -->
+  <!-- layered order is intentional: gradient -> parallax -> waves -> orbs -> particles -> beams -> noise -> overlay -->
+  <div class="animated-gradient-bg" aria-hidden="true"></div>
+
+  <div class="parallax-bg" aria-hidden="true">
+    <div class="parallax-layer parallax-layer-1"></div>
+    <div class="parallax-layer parallax-layer-2"></div>
+  </div>
+
+  <div class="motion-waves" aria-hidden="true">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+
+  <div class="floating-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+  </div>
+
+  <div class="particle-container" aria-hidden="true"></div>
+
+  <div class="light-beams" aria-hidden="true">
+    <div class="light-beam beam-1"></div>
+    <div class="light-beam beam-2"></div>
+    <div class="light-beam beam-3"></div>
+  </div>
+
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="content-overlay" aria-hidden="true"></div>
+  <div class="page-transition" aria-hidden="true" style="opacity: 0;"></div>
+
+  <!-- ==================== AI CHATBOT WIDGET ==================== -->
+  <div class="chatbot-container" id="chatbot">
+    <div class="chatbot-bubble" id="chatbot-toggle">
+      <div class="chatbot-icon">💬</div>
+      <span class="chatbot-pulse"></span>
+    </div>
+    
+    <div class="chatbot-window" id="chatbot-window" style="display: none;">
+      <div class="chatbot-header">
+        <h3>School Assistant</h3>
+        <button class="chatbot-close" id="chatbot-close">✕</button>
+      </div>
+      
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="message bot-message">
+          <p>👋 Hi! I'm your School Assistant. Ask me about admissions, academics, events, or contact information!</p>
+        </div>
+      </div>
+      
+      <div class="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Ask me anything..." maxlength="200">
+        <button id="chatbot-send">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <img src="assets/images/logo.jpg?v=2" alt="Tribhuwan Aadarsha Logo" style="height: 50px; width: auto; margin-right: 10px; border-radius: 4px;">
+          <span>Tribhuwan Aadarsha</span>
+        </div>
+        
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="pages/about.html" class="nav-link">About Us</a></li>
+          <li><a href="pages/academics.html" class="nav-link">Academics</a></li>
+          <li><a href="pages/admissions.html" class="nav-link">Admissions</a></li>
+          <li><a href="pages/gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== PHOTO CAROUSEL TOP ==================== -->
+  <section class="carousel-section">
+    <div class="carousel-container">
+      <div class="carousel-wrapper">
+        <img id="carousel-image" src="assets/images/slide-1.png" alt="School photo" class="carousel-image">
+      </div>
+      <div class="carousel-dots-container">
+        <button class="dot active" onclick="currentSlide(0)"></button>
+        <button class="dot" onclick="currentSlide(1)"></button>
+        <button class="dot" onclick="currentSlide(2)"></button>
+        <button class="dot" onclick="currentSlide(3)"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HERO TEXT SECTION ==================== -->
+  <section class="hero-text">
+    <div class="container">
+      <h1>Tribhuwan Aadarsha Model Secondary School</h1>
+      <p class="location">📍 Putalibazar-1, Syangja, Nepal</p>
+      <p class="tagline">Building Tomorrow's Leaders Today</p>
+      <div class="hero-buttons">
+        <a href="pages/admissions.html" class="btn btn-primary">Apply Now</a>
+        <a href="#quick-access" class="btn btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURES SLIDER ==================== -->
+  <section class="section features-slider" id="features">
+    <div class="container">
+      <h2 class="section-title">Highlights & Features</h2>
+
+          <div class="features-grid" role="list" aria-label="Highlights and features">
+            <article class="feature-card" role="listitem">
+              <div class="feature-icon" aria-hidden="true">🎓</div>
+              <h3>Academic Excellence</h3>
+              <p>Strong curriculum, personalized support and measurable outcomes so students excel across subjects.</p>
+              <a href="pages/academics.html" class="btn btn-sm btn-primary" aria-label="Learn more about academic excellence">Learn more</a>
+            </article>
+
+            <article class="feature-card" role="listitem">
+              <div class="feature-icon" aria-hidden="true">🔬</div>
+              <h3>Practical Labs & Research</h3>
+              <p>Modern science labs, practical workshops and project-based learning that nurture curiosity.</p>
+              <a href="pages/academics.html" class="btn btn-sm btn-primary" aria-label="Learn more about labs and research">Discover</a>
+            </article>
+
+            <article class="feature-card" role="listitem">
+              <div class="feature-icon" aria-hidden="true">🤝</div>
+              <h3>Community & Character</h3>
+              <p>Character building, community engagement and leadership programs — shaping responsible citizens.</p>
+              <a href="pages/about.html" class="btn btn-sm btn-primary" aria-label="Learn more about community and character">Read more</a>
+            </article>
+
+            <article class="feature-card" role="listitem">
+              <div class="feature-icon" aria-hidden="true">⚽</div>
+              <h3>Sports & Extracurriculars</h3>
+              <p>Vibrant sports, arts and cultural activities that foster teamwork, resilience and creativity.</p>
+              <a href="pages/gallery.html" class="btn btn-sm btn-primary" aria-label="View sports and extracurriculars">Explore</a>
+            </article>
+          </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUICK ACCESS SECTION ==================== -->
+  <section class="quick-access" id="quick-access">
+    <div class="container">
+      <h2 class="section-title">Quick Access Portal</h2>
+      
+      <div class="quick-access-grid">
+        <div class="quick-access-card" data-link="pages/admissions.html">
+          <span class="quick-access-icon">📝</span>
+          <h3>Student Portal</h3>
+          <p>Access academic resources and assignments</p>
+        </div>
+        
+        <div class="quick-access-card" data-link="pages/admissions.html">
+          <span class="quick-access-icon">👨‍👩‍👧‍👦</span>
+          <h3>Parent Portal</h3>
+          <p>Track student progress and reports</p>
+        </div>
+        
+        <div class="quick-access-card" data-link="pages/academics.html">
+          <span class="quick-access-icon">📚</span>
+          <h3>Academic Resources</h3>
+          <p>Download syllabi and study materials</p>
+        </div>
+        
+        <div class="quick-access-card" data-link="#">
+          <span class="quick-access-icon">📅</span>
+          <h3>School Calendar</h3>
+          <p>View important dates and events</p>
+        </div>
+        
+        <div class="quick-access-card" data-link="#">
+          <span class="quick-access-icon">📢</span>
+          <h3>Notices</h3>
+          <p>Latest updates and announcements</p>
+        </div>
+        
+        <div class="quick-access-card" data-link="#">
+          <span class="quick-access-icon">🚌</span>
+          <h3>Transport Info</h3>
+          <p>Bus routes and schedules</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ANNOUNCEMENTS & EVENTS ==================== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Latest Announcements & Events</h2>
+
+      <div class="events-ticker">
+        <div class="event-item">
+          <div class="event-date">Dec 15</div>
+          <div class="event-content">
+            <h4>Annual Sports Meet 2025</h4>
+            <p>Three-day inter-house sports competition featuring various sports and activities.</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <div class="event-date">Dec 22</div>
+          <div class="event-content">
+            <h4>Winter Vacation Begins</h4>
+            <p>School closed for winter break. Reopens on January 5, 2025.</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <div class="event-date">Dec 05</div>
+          <div class="event-content">
+            <h4>Science Exhibition</h4>
+            <p>Students showcase innovative projects and research work. Parents and community invited.</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <div class="event-date">Nov 30</div>
+          <div class="event-content">
+            <h4>Admission Form Submission Deadline</h4>
+            <p>Last date to submit admission forms for academic year 2025-2026.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT THE SCHOOL ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="info-block">
+        <div class="info-block-image">
+          <img src="assets/images/about-home.png?v=1" alt="School Building" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="info-block-content">
+          <h3>About Our School</h3>
+          <p>Tribhuwan Aadarsha Model Secondary School has been a beacon of educational excellence in Syangja for over two decades. Our institution is committed to providing quality education that develops students academically, socially, and emotionally.</p>
+          
+          <h4 style="color: var(--text-dark); font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 1rem;">Our Commitment</h4>
+          <ul style="list-style-position: inside; color: var(--text-light);">
+            <li>✓ Modern and innovative teaching methodologies</li>
+            <li>✓ Student-centered learning environment</li>
+            <li>✓ Emphasis on character development</li>
+            <li>✓ Extracurricular activities and sports</li>
+            <li>✓ Community engagement and social responsibility</li>
+          </ul>
+
+          <a href="pages/about.html" class="btn btn-outline" style="margin-top: 1.5rem;">Learn More About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ACADEMIC PROGRAMS ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Academic Programs</h2>
+        <p class="section-subtitle">Comprehensive education from primary through advanced level</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--primary-light), var(--primary-color)); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📖</div>
+          <div class="card-content">
+            <h3 class="card-title">School Level</h3>
+            <p class="card-text">Comprehensive curriculum covering all major subjects with focus on foundational knowledge and skill development.</p>
+            <a href="pages/academics.html" class="btn btn-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark)); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🔬</div>
+          <div class="card-content">
+            <h3 class="card-title">+2 Science</h3>
+            <p class="card-text">Advanced science program with emphasis on Physics, Chemistry, and Biology for engineering and medical aspirants.</p>
+            <a href="pages/academics.html" class="btn btn-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📊</div>
+          <div class="card-content">
+            <h3 class="card-title">+2 Management</h3>
+            <p class="card-text">Business-focused curriculum preparing students for commerce and management studies at higher education.</p>
+            <a href="pages/academics.html" class="btn btn-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LEADERSHIP ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <h2>School Leadership</h2>
+        <p class="section-subtitle">Dedicated educators leading our institution</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="team-card">
+          <div class="team-image"><img src="assets/images/principal.jpg?v=4" alt="Principal Prem Narayan Paudel" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div class="team-info">
+            <h3 class="team-name">Prem Narayan Paudel</h3>
+            <p class="team-position">Principal</p>
+            <p class="team-bio">With over 20 years of experience in education, Mr. Paudel leads our institution with vision and dedication to academic excellence.</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-image"><img src="assets/images/vice-principal.jpg?v=3" alt="Vice-Principal Bishnu Pokhrel" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div class="team-info">
+            <h3 class="team-name">Bishnu Pokhrel</h3>
+            <p class="team-position">Vice-Principal</p>
+            <p class="team-bio">Mr. Pokhrel oversees academic affairs and ensures implementation of innovative teaching methods across all programs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE MAP ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Find Us</h2>
+        <p class="section-subtitle">Located in the heart of Putalibazar, Syangja</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: start;">
+        <div>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.1234567890!2d83.8766667!3d27.3266667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb56789abcdef%3A0x123456789!2sPutalibazar%2C%20Syangja%2C%20Nepal!5e0!3m2!1sen!2snp!4v1234567890123" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, var(--accent-color), var(--border-light)); padding: 2rem; border-radius: 12px;">
+          <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Contact Information</h3>
+          
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="font-size: 1rem; color: var(--text-dark); margin-bottom: 0.5rem;">📍 Address</h4>
+            <p style="color: var(--text-light); margin: 0;">Putalibazar-1, Syangja, Nepal</p>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="font-size: 1rem; color: var(--text-dark); margin-bottom: 0.5rem;">📞 Phone</h4>
+            <p style="color: var(--text-light); margin: 0;">+977-74-550-123</p>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="font-size: 1rem; color: var(--text-dark); margin-bottom: 0.5rem;">📧 Email</h4>
+            <p style="color: var(--text-light); margin: 0;">info@tribhuwan-school.edu.np</p>
+          </div>
+
+          <div>
+            <h4 style="font-size: 1rem; color: var(--text-dark); margin-bottom: 0.5rem;">🕒 Office Hours</h4>
+            <p style="color: var(--text-light); margin: 0;">Monday - Friday: 10 AM - 5 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE ACHIEVEMENTS TIMELINE ==================== -->
+  <section class="section section-alt" id="achievements">
+    <div class="container">
+      <h2 class="section-title">School Milestones & Achievements</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>2000</h3>
+            <p>School Founded with vision of educational excellence</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>2005</h3>
+            <p>Established +2 Science program</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>2010</h3>
+            <p>Built state-of-the-art science labs</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>2015</h3>
+            <p>Won National Academic Excellence Award</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>2020</h3>
+            <p>Launched Digital Learning Platform</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>2025</h3>
+            <p>Introduced AI-Powered Education System</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STUDENT PORTAL PREVIEW ==================== -->
+  <section class="section" id="student-portal">
+    <div class="container">
+      <h2 class="section-title">Student Portal Preview</h2>
+
+      <div class="portal-preview">
+        <div class="portal-card">
+          <div class="portal-header">
+            <h3>Dashboard</h3>
+            <span class="portal-status">📊 Real-time Sync</span>
+          </div>
+          <div class="portal-body">
+            <div class="portal-item">
+              <span>📚 Assignments:</span> <strong>3 Pending</strong>
+            </div>
+            <div class="portal-item">
+              <span>📈 GPA:</span> <strong>3.8/4.0</strong>
+            </div>
+            <div class="portal-item">
+              <span>🏆 Rank:</span> <strong>Top 5%</strong>
+            </div>
+            <div class="portal-item">
+              <span>📝 Attendance:</span> <strong>96%</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="portal-card">
+          <div class="portal-header">
+            <h3>AI Tutor Chat</h3>
+            <span class="portal-status">🤖 Online</span>
+          </div>
+          <div class="portal-body">
+            <div class="chat-preview">
+              <div class="chat-msg bot">You: How do I solve quadratic equations?</div>
+              <div class="chat-msg ai">AI Tutor: Let me explain the quadratic formula...</div>
+              <button class="btn btn-sm btn-primary">Launch Portal →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="portal-card">
+          <div class="portal-header">
+            <h3>Learning Resources</h3>
+            <span class="portal-status">📚 Updated Daily</span>
+          </div>
+          <div class="portal-body">
+            <div class="resource-list">
+              <div class="resource-item">📹 Video: Physics Lab</div>
+              <div class="resource-item">📖 Guide: Chemistry Notes</div>
+              <div class="resource-item">🎯 Quiz: Math Practice</div>
+              <button class="btn btn-sm btn-primary">Explore More →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LOGIN MODAL ==================== -->
+  <div class="modal modal-glass" id="login-modal" style="display: none;">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close">✕</button>
+      
+      <div class="modal-header">
+        <h2>Student Portal Login</h2>
+        <p>Access your personalized dashboard</p>
+      </div>
+      
+      <form class="login-form" id="login-form">
+        <div class="form-group">
+          <label for="login-email">Email or Roll Number</label>
+          <input type="text" id="login-email" placeholder="Enter your email or roll number" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="Enter your password" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About School</h3>
+        <p>Tribhuwan Aadarsha Model Secondary School is committed to providing quality education and developing responsible citizens.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/academics.html">Academics</a></li>
+          <li><a href="pages/admissions.html">Admissions</a></li>
+          <li><a href="pages/gallery.html">Gallery</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>📍 Putalibazar-1, Syangja</li>
+          <li>📞 +977-74-550-123</li>
+          <li>📧 info@tribhuwan-school.edu.np</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Tribhuwan Aadarsha Model Secondary School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/animated-background.js" defer></script>
+  
+  <script src="assets/js/chatbot.js" defer></script>
+</body>
+</html>

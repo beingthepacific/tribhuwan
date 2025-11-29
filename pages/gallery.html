@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery - Tribhuwan Aadarsha Model Secondary School">
+  
+  <title>Gallery - Tribhuwan Aadarsha Model Secondary School</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/chatbot.css">
+  <link rel="stylesheet" href="../assets/css/animated-background.css">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ========== ANIMATED BACKGROUND LAYERS ========== -->
+  <div class="animated-gradient-bg" aria-hidden="true"></div>
+  <div class="parallax-bg" aria-hidden="true">
+    <div class="parallax-layer parallax-layer-1"></div>
+    <div class="parallax-layer parallax-layer-2"></div>
+  </div>
+  <div class="motion-waves" aria-hidden="true">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  <div class="floating-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+  </div>
+  <div class="particle-container" aria-hidden="true"></div>
+  <div class="light-beams" aria-hidden="true">
+    <div class="light-beam beam-1"></div>
+    <div class="light-beam beam-2"></div>
+    <div class="light-beam beam-3"></div>
+  </div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="content-overlay" aria-hidden="true"></div>
+
+  <!-- AI CHATBOT WIDGET -->
+  <div class="chatbot-container" id="chatbot">
+    <div class="chatbot-bubble" id="chatbot-toggle">
+      <div class="chatbot-icon">💬</div>
+      <span class="chatbot-pulse"></span>
+    </div>
+    <div class="chatbot-window" id="chatbot-window" style="display: none;">
+      <div class="chatbot-header">
+        <h3>School Assistant</h3>
+        <button class="chatbot-close" id="chatbot-close">✕</button>
+      </div>
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="message bot-message"><p>👋 Hi! I'm your School Assistant. Ask me about admissions, academics, events, or contact information!</p></div>
+      </div>
+      <div class="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Ask me anything..." maxlength="200">
+        <button id="chatbot-send">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header>
+    <div class="header-top">
+      <div class="header-top-content">
+        <div class="header-top-info">
+          <span>📞 +977-74-550-123</span>
+          <span>📧 info@tribhuwan-school.edu.np</span>
+        </div>
+        <div class="header-top-info">
+          <span>⏰ Mon-Fri: 10 AM - 5 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <img src="../assets/images/logo.jpg?v=2" alt="Tribhuwan Aadarsha Logo" style="height: 50px; width: auto; margin-right: 10px; border-radius: 4px;">
+          <div>
+            <div style="font-size: 0.7em; color: var(--secondary-color);">Tribhuwan Aadarsha</div>
+            <div>Model School</div>
+          </div>
+        </div>
+
+        <ul class="nav-menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== PAGE HERO ==================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Gallery</h1>
+      <p class="location">📍 Moments from Tribhuwan Aadarsha</p>
+    </div>
+  </section>
+
+  <!-- ==================== GALLERY CATEGORIES ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>School Gallery</h2>
+        <p class="section-subtitle">Explore our school events, achievements, and campus life</p>
+      </div>
+
+      <!-- Category Tabs -->
+      <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+        <button class="btn btn-primary" data-category="all">All</button>
+        <button class="btn btn-outline" data-category="events">Events</button>
+        <button class="btn btn-outline" data-category="achievements">Achievements</button>
+        <button class="btn btn-outline" data-category="sports">Sports</button>
+        <button class="btn btn-outline" data-category="classrooms">Facilities</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <!-- Events Category -->
+        <div class="gallery-item" data-category="events">
+          <img src="../assets/images/events/559561746_4170482209830165_9134922993093546029_n.jpg" alt="Cultural Program 1">
+          <div class="gallery-overlay">
+            <span>Cultural Program</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="../assets/images/events/560091613_4170482126496840_7941064033402750817_n.jpg" alt="Cultural Program 2">
+          <div class="gallery-overlay">
+            <span>Cultural Performance</span>
+          </div>
+        </div>
+
+        <!-- Achievements Category -->
+        <div class="gallery-item" data-category="achievements">
+          <img src="../assets/images/achievements/565169807_4173306322881087_5994392723219737492_n.jpg" alt="District Award Winners">
+          <div class="gallery-overlay">
+            <span>District Award Winners</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="achievements">
+          <img src="../assets/images/achievements/591522541_730886340034844_1222334485166389636_n.jpg" alt="Science Fair Champions">
+          <div class="gallery-overlay">
+            <span>Science Fair Champions</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="achievements">
+          <img src="../assets/images/achievements/588566128_1431951401987995_3031649669540924726_n.jpg" alt="Academic Excellence">
+          <div class="gallery-overlay">
+            <span>Academic Excellence</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="achievements">
+          <img src="../assets/images/achievements/513530126_10077301085694706_1884758215387725500_n.jpg" alt="Students Award">
+          <div class="gallery-overlay">
+            <span>Student Awards</span>
+          </div>
+        </div>
+
+        <!-- Sports Category -->
+        <div class="gallery-item" data-category="sports">
+          <img src="../assets/images/sports/79982701_2602945059797050_1074309794770190336_n.jpg" alt="Football Tournament">
+          <div class="gallery-overlay">
+            <span>Football Tournament</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="sports">
+          <img src="../assets/images/sports/498245232_671900568941833_283179013743062489_n.jpg" alt="Track & Field 1">
+          <div class="gallery-overlay">
+            <span>Track & Field</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="sports">
+          <img src="../assets/images/sports/502924370_9856172951140855_8469824122126698239_n.jpg" alt="Track & Field 2">
+          <div class="gallery-overlay">
+            <span>Athletic Competition</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="sports">
+          <img src="../assets/images/sports/505987005_9928210857270397_760859201578064507_n.jpg" alt="Track & Field 3">
+          <div class="gallery-overlay">
+            <span>Field Events</span>
+          </div>
+        </div>
+
+        <!-- Facilities/Classrooms Category -->
+        <div class="gallery-item" data-category="classrooms">
+          <img src="../assets/images/facilities/513208781_10060654927359322_2567626314527833261_n.jpg" alt="School Building 1">
+          <div class="gallery-overlay">
+            <span>School Building</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="classrooms">
+          <img src="../assets/images/facilities/1.jpg" alt="School Building 2">
+          <div class="gallery-overlay">
+            <span>Campus View</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="classrooms">
+          <img src="../assets/images/facilities/2.jpg" alt="Classroom Learning">
+          <div class="gallery-overlay">
+            <span>Classroom Learning</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="classrooms">
+          <img src="../assets/images/facilities/517902977_23932817603049820_5537477913876872835_n.jpg" alt="Classroom 2">
+          <div class="gallery-overlay">
+            <span>Digital Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== YEAR-WISE GALLERY ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <h2>Photo Albums</h2>
+        <p class="section-subtitle">Explore our collections organized by year</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card album-card" onclick="openAlbum('2024-2025')">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--primary-light), var(--primary-color)); display: flex; align-items: center; justify-content: center; font-size: 3rem; cursor: pointer; overflow: hidden; position: relative;">
+            <img id="album-thumb-2024" src="../assets/images/achievements/588566128_1431951401987995_3031649669540924726_n.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 0.8;">
+            <span style="position: relative; z-index: 2;">📷</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">2024-2025</h3>
+            <p class="card-text">Latest photos and events from the current academic year</p>
+            <a class="btn btn-outline btn-sm">View Album</a>
+          </div>
+        </div>
+
+        <div class="card album-card" onclick="openAlbum('2023-2024')">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark)); display: flex; align-items: center; justify-content: center; font-size: 3rem; cursor: pointer; overflow: hidden; position: relative;">
+            <img id="album-thumb-2023" src="../assets/images/sports/79982701_2602945059797050_1074309794770190336_n.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 0.8;">
+            <span style="position: relative; z-index: 2;">📸</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">2023-2024</h3>
+            <p class="card-text">Memorable moments and events from last year</p>
+            <a class="btn btn-outline btn-sm">View Album</a>
+          </div>
+        </div>
+
+        <div class="card album-card" onclick="openAlbum('archives')">
+          <div class="card-image" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); display: flex; align-items: center; justify-content: center; font-size: 3rem; cursor: pointer; overflow: hidden; position: relative;">
+            <img id="album-thumb-archive" src="../assets/images/facilities/513208781_10060654927359322_2567626314527833261_n.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 0.8;">
+            <span style="position: relative; z-index: 2;">🎞️</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Archives</h3>
+            <p class="card-text">Historical photos from previous years</p>
+            <a class="btn btn-outline btn-sm">View Album</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== VIDEO GALLERY ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Video Gallery</h2>
+        <p class="section-subtitle">Watch highlights from school events and activities</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div style="background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+          <div style="background: linear-gradient(135deg, var(--primary-light), var(--primary-color)); width: 100%; padding-top: 56.25%; position: relative; display: flex; align-items: center; justify-content: center; font-size: 3rem; cursor: pointer;">▶️</div>
+          <div style="padding: 1.5rem;">
+            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">School Annual Day 2024</h3>
+            <p style="color: var(--text-light); margin: 0;">Highlights from our annual celebration event</p>
+          </div>
+        </div>
+
+        <div style="background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+          <div style="background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark)); width: 100%; padding-top: 56.25%; position: relative; display: flex; align-items: center; justify-content: center; font-size: 3rem; cursor: pointer;">▶️</div>
+          <div style="padding: 1.5rem;">
+            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Science Fair 2024</h3>
+            <p style="color: var(--text-light); margin: 0;">Student project presentations and innovations</p>
+          </div>
+        </div>
+
+        <div style="background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+          <div style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); width: 100%; padding-top: 56.25%; position: relative; display: flex; align-items: center; justify-content: center; font-size: 3rem; cursor: pointer;">▶️</div>
+          <div style="padding: 1.5rem;">
+            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Sports Meet 2024</h3>
+            <p style="color: var(--text-light); margin: 0;">Action-packed moments from athletic competitions</p>
+          </div>
+        </div>
+
+        <div style="background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+          <div style="background: linear-gradient(135deg, var(--primary-dark), var(--secondary-color)); width: 100%; padding-top: 56.25%; position: relative; display: flex; align-items: center; justify-content: center; font-size: 3rem; cursor: pointer;">▶️</div>
+          <div style="padding: 1.5rem;">
+            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Cultural Program</h3>
+            <p style="color: var(--text-light); margin: 0;">Traditional performances and cultural celebrations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About School</h3>
+        <p>Tribhuwan Aadarsha Model Secondary School is committed to providing quality education and developing responsible global citizens.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>📍 Putalibazar-1, Syangja</li>
+          <li>📞 +977-74-550-123</li>
+          <li>📧 info@tribhuwan-school.edu.np</li>
+          <li>🕒 Mon-Fri: 10 AM - 5 PM</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Tribhuwan Aadarsha Model Secondary School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+  <script>
+    // Gallery filter functionality
+    const categoryBtns = document.querySelectorAll('[data-category]');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.getAttribute('data-category');
+        
+        // Update active button
+        categoryBtns.forEach(b => b.classList.remove('btn-primary'));
+        categoryBtns.forEach(b => b.classList.add('btn-outline'));
+        btn.classList.remove('btn-outline');
+        btn.classList.add('btn-primary');
+
+        // Filter items
+        galleryItems.forEach(item => {
+          if (category === 'all' || item.getAttribute('data-category').includes(category)) {
+            item.style.display = '';
+            setTimeout(() => item.classList.add('fade-in'), 10);
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Album card hover effect
+    const albumCards = document.querySelectorAll('.album-card');
+    albumCards.forEach(card => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('mouseover', function() {
+        this.style.transform = 'translateY(-10px)';
+      });
+      card.addEventListener('mouseout', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+
+    // Album view functionality (can be extended to show full albums)
+    function openAlbum(albumName) {
+      alert(`Opening album: ${albumName}\n\nPhotos are stored in: assets/images/albums/${albumName}/`);
+    }
+  </script>
+  <script src="../assets/js/animated-background.js" defer></script>
+  <script src="../assets/js/chatbot.js" defer></script>
+</body>
+</html>
