@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tribhuwan Aadarsha - Login Portal">
+  <title>Tribhuwan Aadarsha - Login Portal</title>
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/portal.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+
+  <!-- LOGIN PAGE -->
+  <div class="login-page" id="login-page">
+    <div class="login-animated-bg"></div>
+    
+    <div class="login-container">
+      <div class="login-box">
+        <div class="login-logo">
+          <img src="assets/images/logo.jpg" alt="Tribhuwan Aadarsha Logo">
+        </div>
+        
+        <h1 class="login-title">Tribhuwan Aadarsha</h1>
+        <p class="login-subtitle">Portal Access</p>
+        
+        <div class="login-tabs">
+          <button class="login-tab-btn active" data-tab="student">Student</button>
+          <button class="login-tab-btn" data-tab="teacher">Teacher</button>
+        </div>
+
+        <!-- STUDENT LOGIN -->
+        <form class="login-form active" id="student-login-form" data-tab="student">
+          <div class="form-group">
+            <label for="student-roll">Username</label>
+            <input type="text" id="student-roll" placeholder="e.g., beingayaan" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="student-password">Password</label>
+            <input type="password" id="student-password" placeholder="Enter password" required>
+            <span class="password-toggle" onclick="togglePassword('student-password')">👁️</span>
+          </div>
+          
+          <div class="form-checkbox">
+            <input type="checkbox" id="student-remember">
+            <label for="student-remember">Remember me</label>
+          </div>
+          
+          <button type="submit" class="login-btn">Login as Student</button>
+          
+          <p class="login-link">
+            <a href="#" onclick="resetPassword('student'); return false;">Forgot password?</a>
+          </p>
+        </form>
+
+        <!-- TEACHER LOGIN -->
+        <form class="login-form" id="teacher-login-form" data-tab="teacher">
+          <div class="form-group">
+            <label for="teacher-id">Employee ID</label>
+            <input type="text" id="teacher-id" placeholder="e.g., T001" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="teacher-password">Password</label>
+            <input type="password" id="teacher-password" placeholder="Enter password" required>
+            <span class="password-toggle" onclick="togglePassword('teacher-password')">👁️</span>
+          </div>
+          
+          <div class="form-checkbox">
+            <input type="checkbox" id="teacher-remember">
+            <label for="teacher-remember">Remember me</label>
+          </div>
+          
+          <button type="submit" class="login-btn">Login as Teacher</button>
+          
+          <p class="login-link">
+            <a href="#" onclick="resetPassword('teacher'); return false;">Forgot password?</a>
+          </p>
+        </form>
+
+        <div class="login-footer">
+          <p>For support, contact: <strong>info@tribhuwan-school.edu.np</strong></p>
+        </div>
+      </div>
+
+      <div class="login-info">
+        <div class="info-card">
+          <h3>📚 Students</h3>
+          <p>Access course materials, view assignments, check results, and communicate with teachers.</p>
+        </div>
+        <div class="info-card">
+          <h3>👨‍🏫 Teachers</h3>
+          <p>Manage classes, publish results, track student progress, and share learning resources.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STUDENT DASHBOARD -->
+  <div class="dashboard-page" id="student-dashboard" style="display: none;">
+    <nav class="dashboard-nav">
+      <div class="dashboard-logo">
+        <img src="assets/images/logo.jpg" alt="Logo">
+        <span>Student Portal</span>
+      </div>
+      <div class="nav-links">
+        <a href="#" class="nav-item active" data-section="dashboard">Dashboard</a>
+        <a href="#" class="nav-item" data-section="resources">Resources</a>
+        <a href="#" class="nav-item" data-section="results">Results</a>
+        <a href="#" class="nav-item" data-section="assignments">Assignments</a>
+        <a href="#" class="nav-item" data-section="profile">Profile</a>
+      </div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+
+    <div class="dashboard-content">
+      <!-- STUDENT DASHBOARD HOME -->
+      <section class="dashboard-section active" id="section-dashboard">
+        <div class="section-header">
+          <h2>Welcome, <span id="student-name">Student</span>! 👋</h2>
+          <p>Your learning journey starts here</p>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="dashboard-card">
+            <div class="card-icon">📖</div>
+            <h3>Active Classes</h3>
+            <p class="card-number">4</p>
+            <p class="card-desc">Science, Math, English, Social Studies</p>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="card-icon">📝</div>
+            <h3>Pending Assignments</h3>
+            <p class="card-number">3</p>
+            <p class="card-desc">Due this week</p>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="card-icon">📊</div>
+            <h3>Last Results</h3>
+            <p class="card-number">78%</p>
+            <p class="card-desc">Average score</p>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="card-icon">🏆</div>
+            <h3>Achievements</h3>
+            <p class="card-number">5</p>
+            <p class="card-desc">Badges earned</p>
+          </div>
+        </div>
+
+        <div class="dashboard-row">
+          <div class="dashboard-section-box">
+            <h3>📌 Recent Announcements</h3>
+            <div class="announcement">
+              <h4>Midterm Exams Schedule</h4>
+              <p>Midterm examinations will be held from December 10-20, 2025</p>
+              <span class="date">Dec 5, 2025</span>
+            </div>
+            <div class="announcement">
+              <h4>Science Project Submission</h4>
+              <p>Submit your science project by December 8th</p>
+              <span class="date">Dec 1, 2025</span>
+            </div>
+          </div>
+
+          <div class="dashboard-section-box">
+            <h3>📅 Upcoming Events</h3>
+            <div class="event">
+              <span class="event-date">Dec 10</span>
+              <div>
+                <h4>Midterm Exams Begin</h4>
+                <p>All classes</p>
+              </div>
+            </div>
+            <div class="event">
+              <span class="event-date">Dec 15</span>
+              <div>
+                <h4>Sports Day</h4>
+                <p>Inter-house competition</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDENT RESOURCES -->
+      <section class="dashboard-section" id="section-resources">
+        <div class="section-header">
+          <h2>📚 Learning Resources</h2>
+          <p>Download notes, study materials, and reference books</p>
+        </div>
+
+        <div class="resources-grid">
+          <div class="resource-card">
+            <div class="resource-icon">📄</div>
+            <h3>Science Notes</h3>
+            <p>Chapter 1-12 Complete Notes</p>
+            <button class="btn btn-primary btn-sm" onclick="downloadResource('science-notes.pdf')">Download</button>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">📐</div>
+            <h3>Mathematics Guide</h3>
+            <p>Formula Sheet & Practice Problems</p>
+            <button class="btn btn-primary btn-sm" onclick="downloadResource('math-guide.pdf')">Download</button>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">📕</div>
+            <h3>English Literature</h3>
+            <p>Novel Analysis & Essay Writing Tips</p>
+            <button class="btn btn-primary btn-sm" onclick="downloadResource('english-lit.pdf')">Download</button>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">🌍</div>
+            <h3>Social Studies</h3>
+            <p>History & Geography Reference Material</p>
+            <button class="btn btn-primary btn-sm" onclick="downloadResource('social-studies.pdf')">Download</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDENT RESULTS -->
+      <section class="dashboard-section" id="section-results">
+        <div class="section-header">
+          <h2>📊 Results & Grades</h2>
+          <p>View your academic performance</p>
+        </div>
+
+        <div class="results-container">
+          <div class="results-filters">
+            <select id="results-filter">
+              <option value="all">All Subjects</option>
+              <option value="science">Science</option>
+              <option value="math">Mathematics</option>
+              <option value="english">English</option>
+              <option value="social">Social Studies</option>
+            </select>
+          </div>
+
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Midterm</th>
+                <th>Final</th>
+                <th>Practical</th>
+                <th>Overall</th>
+                <th>Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Science</td>
+                <td>42/50</td>
+                <td>38/50</td>
+                <td>20/20</td>
+                <td>80/100</td>
+                <td><span class="grade-a">A</span></td>
+              </tr>
+              <tr>
+                <td>Mathematics</td>
+                <td>40/50</td>
+                <td>36/50</td>
+                <td>18/20</td>
+                <td>76/100</td>
+                <td><span class="grade-b">B+</span></td>
+              </tr>
+              <tr>
+                <td>English</td>
+                <td>38/50</td>
+                <td>40/50</td>
+                <td>19/20</td>
+                <td>78/100</td>
+                <td><span class="grade-b">B+</span></td>
+              </tr>
+              <tr>
+                <td>Social Studies</td>
+                <td>41/50</td>
+                <td>39/50</td>
+                <td>20/20</td>
+                <td>80/100</td>
+                <td><span class="grade-a">A</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- STUDENT ASSIGNMENTS -->
+      <section class="dashboard-section" id="section-assignments">
+        <div class="section-header">
+          <h2>📝 Assignments</h2>
+          <p>Track your assignments and submissions</p>
+        </div>
+
+        <div class="assignments-container">
+          <div class="assignment-card pending">
+            <div class="assignment-status">Pending</div>
+            <h3>Science Project: Solar System</h3>
+            <p class="subject-tag">Science - Ms. Sharma</p>
+            <p class="assignment-desc">Create a 3D model or digital presentation of the solar system</p>
+            <div class="assignment-meta">
+              <span>📅 Due: Dec 8, 2025</span>
+              <span>⏱️ 7 days left</span>
+            </div>
+          </div>
+
+          <div class="assignment-card pending">
+            <div class="assignment-status">Pending</div>
+            <h3>Math Assignment: Algebra Problems</h3>
+            <p class="subject-tag">Mathematics - Mr. Patel</p>
+            <p class="assignment-desc">Solve 20 algebraic equations from Chapter 5</p>
+            <div class="assignment-meta">
+              <span>📅 Due: Dec 5, 2025</span>
+              <span>⏱️ 4 days left</span>
+            </div>
+          </div>
+
+          <div class="assignment-card submitted">
+            <div class="assignment-status">Submitted</div>
+            <h3>English Essay: My Hero</h3>
+            <p class="subject-tag">English - Mr. Kumar</p>
+            <p class="assignment-desc">Write 500 words essay on your hero</p>
+            <div class="assignment-meta">
+              <span>📅 Submitted: Nov 28, 2025</span>
+              <span>✅ Grade: A (95/100)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDENT PROFILE -->
+      <section class="dashboard-section" id="section-profile">
+        <div class="section-header">
+          <h2>👤 My Profile</h2>
+          <p>Personal information and settings</p>
+        </div>
+
+        <div class="profile-container">
+          <div class="profile-header">
+            <div class="profile-avatar">👨‍🎓</div>
+            <div class="profile-info">
+              <h3 id="profile-name">Raj Kumar Singh</h3>
+              <p>Roll No: 101 | Class: XII-A</p>
+            </div>
+          </div>
+
+          <div class="profile-details">
+            <div class="detail-group">
+              <label>Email</label>
+              <p>raj.kumar@tribhuwan.edu.np</p>
+            </div>
+            <div class="detail-group">
+              <label>Phone</label>
+              <p>+977-98xxxxxxxx</p>
+            </div>
+            <div class="detail-group">
+              <label>Date of Birth</label>
+              <p>January 15, 2007</p>
+            </div>
+            <div class="detail-group">
+              <label>Class</label>
+              <p>XII-A (Science)</p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="editProfile()">Edit Profile</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- TEACHER DASHBOARD -->
+  <div class="dashboard-page" id="teacher-dashboard" style="display: none;">
+    <nav class="dashboard-nav">
+      <div class="dashboard-logo">
+        <img src="assets/images/logo.jpg" alt="Logo">
+        <span>Teacher Portal</span>
+      </div>
+      <div class="nav-links">
+        <a href="#" class="nav-item active" data-section="dashboard">Dashboard</a>
+        <a href="#" class="nav-item" data-section="classes">Classes</a>
+        <a href="#" class="nav-item" data-section="students">Students</a>
+        <a href="#" class="nav-item" data-section="results">Publish Results</a>
+        <a href="#" class="nav-item" data-section="resources">Resources</a>
+        <a href="#" class="nav-item" data-section="attendance">Attendance</a>
+      </div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+
+    <div class="dashboard-content">
+      <!-- TEACHER DASHBOARD HOME -->
+      <section class="dashboard-section active" id="section-dashboard">
+        <div class="section-header">
+          <h2>Welcome, <span id="teacher-name">Teacher</span>! 👨‍🏫</h2>
+          <p>Manage your classes and students effectively</p>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="dashboard-card">
+            <div class="card-icon">👥</div>
+            <h3>Total Students</h3>
+            <p class="card-number">120</p>
+            <p class="card-desc">Across 4 classes</p>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="card-icon">📚</div>
+            <h3>Classes</h3>
+            <p class="card-number">4</p>
+            <p class="card-desc">XII-A, XII-B, XI-A, XI-B</p>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="card-icon">📊</div>
+            <h3>Results Published</h3>
+            <p class="card-number">3</p>
+            <p class="card-desc">Pending: 1</p>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="card-icon">📋</div>
+            <h3>Attendance Rate</h3>
+            <p class="card-number">92%</p>
+            <p class="card-desc">Class average</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEACHER CLASSES -->
+      <section class="dashboard-section" id="section-classes">
+        <div class="section-header">
+          <h2>📚 Manage Classes</h2>
+          <p>View and manage your assigned classes</p>
+        </div>
+
+        <div class="classes-grid">
+          <div class="class-card">
+            <h3>XII-A (Science)</h3>
+            <p>Grade: XII | Stream: Science</p>
+            <div class="class-stats">
+              <span>👥 32 Students</span>
+              <span>📊 Avg: 78%</span>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="manageClass('XII-A')">Manage</button>
+          </div>
+
+          <div class="class-card">
+            <h3>XII-B (Science)</h3>
+            <p>Grade: XII | Stream: Science</p>
+            <div class="class-stats">
+              <span>👥 28 Students</span>
+              <span>📊 Avg: 75%</span>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="manageClass('XII-B')">Manage</button>
+          </div>
+
+          <div class="class-card">
+            <h3>XI-A (Science)</h3>
+            <p>Grade: XI | Stream: Science</p>
+            <div class="class-stats">
+              <span>👥 30 Students</span>
+              <span>📊 Avg: 76%</span>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="manageClass('XI-A')">Manage</button>
+          </div>
+
+          <div class="class-card">
+            <h3>XI-B (Science)</h3>
+            <p>Grade: XI | Stream: Science</p>
+            <div class="class-stats">
+              <span>👥 30 Students</span>
+              <span>📊 Avg: 77%</span>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="manageClass('XI-B')">Manage</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEACHER STUDENTS -->
+      <section class="dashboard-section" id="section-students">
+        <div class="section-header">
+          <h2>👥 Student Information</h2>
+          <p>View and manage student details</p>
+        </div>
+
+        <div class="student-filters">
+          <input type="text" id="student-search" placeholder="Search student by name or roll number...">
+          <select id="class-filter">
+            <option value="">All Classes</option>
+            <option value="XII-A">XII-A</option>
+            <option value="XII-B">XII-B</option>
+            <option value="XI-A">XI-A</option>
+            <option value="XI-B">XI-B</option>
+          </select>
+        </div>
+
+        <table class="students-table">
+          <thead>
+            <tr>
+              <th>Roll No</th>
+              <th>Name</th>
+              <th>Class</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Attendance</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>101</td>
+              <td>Raj Kumar Singh</td>
+              <td>XII-A</td>
+              <td>raj@tribhuwan.edu.np</td>
+              <td>+977-98xxxxxxxx</td>
+              <td>92%</td>
+              <td><button class="btn-icon" onclick="viewStudentDetails('101')">👁️</button></td>
+            </tr>
+            <tr>
+              <td>102</td>
+              <td>Priya Sharma</td>
+              <td>XII-A</td>
+              <td>priya@tribhuwan.edu.np</td>
+              <td>+977-98xxxxxxxx</td>
+              <td>95%</td>
+              <td><button class="btn-icon" onclick="viewStudentDetails('102')">👁️</button></td>
+            </tr>
+            <tr>
+              <td>103</td>
+              <td>Ankit Patel</td>
+              <td>XII-A</td>
+              <td>ankit@tribhuwan.edu.np</td>
+              <td>+977-98xxxxxxxx</td>
+              <td>88%</td>
+              <td><button class="btn-icon" onclick="viewStudentDetails('103')">👁️</button></td>
+            </tr>
+            <tr>
+              <td>104</td>
+              <td>Isha Verma</td>
+              <td>XII-A</td>
+              <td>isha@tribhuwan.edu.np</td>
+              <td>+977-98xxxxxxxx</td>
+              <td>96%</td>
+              <td><button class="btn-icon" onclick="viewStudentDetails('104')">👁️</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- TEACHER PUBLISH RESULTS -->
+      <section class="dashboard-section" id="section-results">
+        <div class="section-header">
+          <h2>📊 Publish Results</h2>
+          <p>Enter and publish student results</p>
+        </div>
+
+        <div class="results-form-container">
+          <form class="results-form" onsubmit="publishResults(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Select Class</label>
+                <select id="result-class" required>
+                  <option value="">Choose Class</option>
+                  <option value="XII-A">XII-A</option>
+                  <option value="XII-B">XII-B</option>
+                  <option value="XI-A">XI-A</option>
+                  <option value="XI-B">XI-B</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Exam Type</label>
+                <select id="exam-type" required>
+                  <option value="">Choose Exam</option>
+                  <option value="midterm">Midterm Examination</option>
+                  <option value="final">Final Examination</option>
+                  <option value="unit">Unit Test</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="results-table-input">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Roll No</th>
+                    <th>Student Name</th>
+                    <th>Marks Obtained</th>
+                    <th>Total Marks</th>
+                    <th>Grade</th>
+                  </tr>
+                </thead>
+                <tbody id="results-tbody">
+                  <tr>
+                    <td>101</td>
+                    <td>Raj Kumar Singh</td>
+                    <td><input type="number" min="0" max="100" value="80"></td>
+                    <td>100</td>
+                    <td><span class="grade-auto">A</span></td>
+                  </tr>
+                  <tr>
+                    <td>102</td>
+                    <td>Priya Sharma</td>
+                    <td><input type="number" min="0" max="100" value="92"></td>
+                    <td>100</td>
+                    <td><span class="grade-auto">A+</span></td>
+                  </tr>
+                  <tr>
+                    <td>103</td>
+                    <td>Ankit Patel</td>
+                    <td><input type="number" min="0" max="100" value="75"></td>
+                    <td>100</td>
+                    <td><span class="grade-auto">B+</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Publish Results</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- TEACHER RESOURCES -->
+      <section class="dashboard-section" id="section-resources">
+        <div class="section-header">
+          <h2>📚 Share Resources</h2>
+          <p>Upload notes, assignments, and study materials</p>
+        </div>
+
+        <div class="resource-upload">
+          <div class="upload-box" onclick="document.getElementById('file-input').click()">
+            <p>📤 Click to upload or drag and drop</p>
+            <p style="font-size: 0.9rem; color: #999;">PDF, DOC, PPT (max 10MB)</p>
+            <input type="file" id="file-input" style="display: none;">
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">📋 Your Resources</h3>
+        <div class="resources-list">
+          <div class="resource-item">
+            <span>📄 Science_Chapter1_Notes.pdf</span>
+            <span class="resource-date">Uploaded: Dec 1, 2025</span>
+            <button class="btn-icon" onclick="deleteResource('resource-1')">🗑️</button>
+          </div>
+          <div class="resource-item">
+            <span>📊 Math_Formulas.pdf</span>
+            <span class="resource-date">Uploaded: Nov 28, 2025</span>
+            <button class="btn-icon" onclick="deleteResource('resource-2')">🗑️</button>
+          </div>
+          <div class="resource-item">
+            <span>📕 English_Poem_Analysis.docx</span>
+            <span class="resource-date">Uploaded: Nov 25, 2025</span>
+            <button class="btn-icon" onclick="deleteResource('resource-3')">🗑️</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEACHER ATTENDANCE -->
+      <section class="dashboard-section" id="section-attendance">
+        <div class="section-header">
+          <h2>📋 Mark Attendance</h2>
+          <p>Update daily student attendance</p>
+        </div>
+
+        <div class="attendance-container">
+          <form class="attendance-form" onsubmit="saveAttendance(event)">
+            <div class="form-group">
+              <label>Select Class</label>
+              <select id="attendance-class" required>
+                <option value="">Choose Class</option>
+                <option value="XII-A">XII-A</option>
+                <option value="XII-B">XII-B</option>
+                <option value="XI-A">XI-A</option>
+                <option value="XI-B">XI-B</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Date</label>
+              <input type="date" id="attendance-date" required>
+            </div>
+
+            <table class="attendance-table">
+              <thead>
+                <tr>
+                  <th>Roll No</th>
+                  <th>Student Name</th>
+                  <th>Present</th>
+                  <th>Absent</th>
+                  <th>Leave</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>101</td>
+                  <td>Raj Kumar Singh</td>
+                  <td><input type="radio" name="attendance-101" value="present" checked></td>
+                  <td><input type="radio" name="attendance-101" value="absent"></td>
+                  <td><input type="radio" name="attendance-101" value="leave"></td>
+                </tr>
+                <tr>
+                  <td>102</td>
+                  <td>Priya Sharma</td>
+                  <td><input type="radio" name="attendance-102" value="present" checked></td>
+                  <td><input type="radio" name="attendance-102" value="absent"></td>
+                  <td><input type="radio" name="attendance-102" value="leave"></td>
+                </tr>
+                <tr>
+                  <td>103</td>
+                  <td>Ankit Patel</td>
+                  <td><input type="radio" name="attendance-103" value="present" checked></td>
+                  <td><input type="radio" name="attendance-103" value="absent"></td>
+                  <td><input type="radio" name="attendance-103" value="leave"></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <button type="submit" class="btn btn-primary">Save Attendance</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/portal.js"></script>
+</body>
+</html>
